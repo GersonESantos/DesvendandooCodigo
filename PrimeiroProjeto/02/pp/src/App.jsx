@@ -1,3 +1,5 @@
+import  contador from './contador';
+
 function Cabecalho() {
   return (
     <header style={{backgroundColor:'#20232a', color:'white', padding:'10px'}}>
@@ -13,6 +15,7 @@ export default function App() {
   return (
     <div> 
       <Cabecalho/>
+      <contador/>
       <footer style={{textAlign: 'center', padding: '20px', backgroundColor:'#eee', marginTop:'20px'}}>
         <p>Rodapé do meu primeiro projeto React</p>
       </footer> 
