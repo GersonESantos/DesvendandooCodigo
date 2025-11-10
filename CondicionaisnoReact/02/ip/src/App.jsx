@@ -4,6 +4,8 @@ import CondicionalComposta from "./contonents/CondicionalComposta"
 import CondicionalTernaria from "./contonents/CondicionalTernaria"
 import CondicionalComInput from "./contonents/CondicionalInput"
 import CondicionalComEstado from "./contonents/CondicionalComEstado"
+import CondicionalSwitch from "./contonents/CondicionalSwitch"
+import CondicionalInline from "./contonents/CondicionalInline"
 function App() {  
   return (
     <div style={{padding:"20px"}}>
@@ -18,10 +20,10 @@ function App() {
       <Separador />
       <CondicionalComEstado />
       <Separador />
-
-      {/* <CondicionalSwitch />
+      <CondicionalSwitch />
       <Separador />
-      <CondicionalInline />                            */}
+      <CondicionalInline /> 
+      <Separador />
     </div>
   )
 }

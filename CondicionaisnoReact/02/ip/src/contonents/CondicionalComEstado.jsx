@@ -20,7 +20,7 @@ function CondicionalComEstado() {
     
     return(
         <div>
-            <h3>Condicional com Estado</h3>
+            <h3>Condicional com Estado Dinamico</h3>
             <input 
                 type="number" 
                 placeholder="Digite o valor"
