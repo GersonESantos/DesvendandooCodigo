@@ -6,6 +6,7 @@ import CondicionalComInput from "./contonents/CondicionalInput"
 import CondicionalComEstado from "./contonents/CondicionalComEstado"
 import CondicionalSwitch from "./contonents/CondicionalSwitch"
 import CondicionalInline from "./contonents/CondicionalInline"
+import CondicionalAlinhada from "./contonents/CondicionalAlinhada"
 function App() {  
   return (
     <div style={{padding:"20px"}}>
@@ -23,6 +24,8 @@ function App() {
       <CondicionalSwitch />
       <Separador />
       <CondicionalInline /> 
+      <Separador />
+      <CondicionalAlinhada />
       <Separador />
     </div>
   )
