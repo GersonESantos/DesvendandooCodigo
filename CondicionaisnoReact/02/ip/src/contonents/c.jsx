@@ -4,7 +4,7 @@ function CondicionalSwitch() {
     let nomeDia;
     const mensagem = (()=>{
         switch (dia) {
-        case 0:
+        case "Segunda":
             nomeDia = "Domingo";
             break;
         case 1:
