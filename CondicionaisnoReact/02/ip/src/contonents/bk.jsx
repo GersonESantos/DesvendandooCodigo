@@ -6,6 +6,8 @@ function CondicionalSwitchCaseNota() {
 
     const avaliarNota = (nota) => 
     {
+        const valor = parseFloat(nota);
+        let resultado;
         switch (true) 
         {
             case nota >= 9:
