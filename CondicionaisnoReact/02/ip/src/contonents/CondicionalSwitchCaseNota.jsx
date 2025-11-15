@@ -1,40 +1,58 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function CondicionalSwitchCaseNota() {
-	const [nota, setNota] = useState(0);
-	const [conceito, setConceito] = useState("");
+  const [nota, setNota] = useState(0);
+  const [conceito, setConceito] = useState("");
 
-	const avaliarNota = (nota) => 
-	{
-		switch (true) 
-		{
-			case nota >= 9:
-				setConceito("A");
-				break;
-			case nota >= 7:
-				setConceito("B");
-				break;
-			case nota >= 5:
-				setConceito("C");
-				break;
-			case nota >= 3:
-				setConceito("D");
-				break;
-			default:
-				setConceito("E");
-		}
-	};
+  const avaliarNota = (n) => {
+    const value = Number(n);
+    if (Number.isNaN(value)) {
+      setConceito("");
+      return;
+    }
 
-	return (
-		<div>
-			<h2>Nota: {nota}</h2>
-			<input
-				type="number"
-				value={nota}
-				onChange={(e) => setNota(Number(e.target.value))}
-			/>
-		</div>
-	);
+    switch (true) {
+      case value >= 9:
+        setConceito("A");
+        break;
+      case value >= 7:
+        setConceito("B");
+        break;
+      case value >= 5:
+        setConceito("C");
+        break;
+      case value >= 3:
+        setConceito("D");
+        break;
+      default:
+        setConceito("E");
+    }
+  };
+
+  useEffect(() => {
+    avaliarNota(nota);
+  }, [nota]);
+
+  return (
+    <div>
+      <h2>Nota: {nota}</h2>
+      <label>
+        Informe a nota:
+        <input
+          type="number"
+          min={0}
+          max={10}
+          step="0.1"
+          value={nota}
+          onChange={(e) => {
+            const v = e.target.value === "" ? "" : Number(e.target.value);
+            setNota(v === "" ? 0 : v);
+          }}
+        />
+      </label>
+      <p>Conceito: {conceito}</p>
+    </div>
+  );
 }
 
 export default CondicionalSwitchCaseNota;
