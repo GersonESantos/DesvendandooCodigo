@@ -2,6 +2,28 @@ import { useState } from "react";
 
 function CondicionalSwitchCaseNota() {
 	const [nota, setNota] = useState(0);
+	const [conceito, setConceito] = useState("");
+
+	const avaliarNota = (nota) => 
+	{
+		switch (true) 
+		{
+			case nota >= 9:
+				setConceito("A");
+				break;
+			case nota >= 7:
+				setConceito("B");
+				break;
+			case nota >= 5:
+				setConceito("C");
+				break;
+			case nota >= 3:
+				setConceito("D");
+				break;
+			default:
+				setConceito("E");
+		}
+	};
 
 	return (
 		<div>
